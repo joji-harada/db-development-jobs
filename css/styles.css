@@ -9,9 +9,31 @@
 
 html,body {
     background-color: darkgrey;
-    font-family: 'Quicksand', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95em;
     line-height: 1.5em;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: #000;
+}
+
+nav li {
+    float: left;
+    line-height: 50px;
+    width:15%;
+    list-style-type: none;
+}
+
+nav li:nth-child(1) a,
+nav li:nth-child(2) a,
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
 }
 
 ::selection {
@@ -23,7 +45,7 @@ h2, p {
     padding:0.5em;
 }
 
-p { font-family: 'Roboto', sans-serif;
+p { font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 14px; }
 
@@ -49,19 +71,19 @@ h1 {
     font-size: 3em;
     margin: 1.4%;
     margin-top: 1em;
-    font-family: 'Merriweather', serif;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 .article {
     display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     padding: 20px 20px;
     border: 5px;
 }
@@ -71,19 +93,26 @@ h1>a {
     color:#000;
 }
 
+ol{
+    margin-left: 40px;
+}
+
 div.header {
     margin: 0 auto;
     overflow: auto;
     margin-top: 2%;
-    height: 10em;
+    height: 175px;
     text-align: center;
+    background-color: white;
+}
+
+.header h1 {
+    margin-bottom: 15px;
 }
 
 p.contributers {
     color: #bbc3c8;
-    background: #292929;
-    display: inline-block;
-    font-family: 'Georgia', serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-size: 18px;
     line-height: 22px;
@@ -98,38 +127,45 @@ a:link, a:visited {
 
 /* DESKTOP */
 @media all and (min-width:1200px) {    
-div.wrapper {
-    max-width:80%;
-    margin:0 auto;
-    overflow:auto; 
-}   
+    div.wrapper {
+        max-width:80%;
+        margin:0 auto;
+        overflow:auto; 
+    }   
 
-div.header {
-    margin:0 auto;
-}
-h1 {
-    font-weight: normal;
-    font-size: 3em;
-    padding-left: 1%;
-    margin-bottom: 5px;
-
+    div.header {
+        margin:0 auto;
+    }
+    h1 {
+        font-weight: normal;
+        font-size: 3em;
+        padding-left: 1%;
+        margin-bottom: 5px;
+        }
 }
 
 /* TABLET */
 @media all and (min-width:627px) and (max-width:1199px) {
- div.wrapper {
-    max-width:80%;
-    margin:0 auto;
-    overflow:auto;
-}
+    div.wrapper {
+        max-width:80%;
+        margin:0 auto;
+        overflow:auto;
+    }
 
-h1 {
-    font-weight: normal;
-    display: inline;
-    font-size: 3em;
-    margin-bottom: -50px;
-    z-index:3;
+    div.header{
+        height: 100px;
+    }
 
+    h1 {
+        font-weight: 200;
+        line-height: 100px;
+        font-size: 2em;
+        z-index:3;
+    }
+
+    p.mobile-vanish{
+        display: none;
+    }
 }
 /* END EMBED RESPONSIVELY STYLES */ 
 footer {
@@ -142,24 +178,31 @@ footer {
 
 /* PHONE */
 @media all and (max-width:626px) {
+    
     div.wrapper {
         width: 100%;
         background-color:#fff;
     }
-div.header {
-    max-width:100%;
-    margin:0 auto;
-    background-color: #ff740054;/* TopBottom RightLeft */   
-}
+    
+    div.header {
+        max-width:100%;
+        height: 100px;
+        margin:0 auto;
+    }
+
     h1 {
-    display: inline;
-    width: 100%;
-    padding-left: 1%;
-    font-size:2em;
+        font-weight: 100;
+        line-height: 100px;
+        padding-left: 1%;
+        font-size: 1.5em;
     }
     
     section {
         width:100%;
-        float:none;
-        
+        float:none;  
     }
+
+    p.mobile-vanish{
+        display: none;
+    }
+}
