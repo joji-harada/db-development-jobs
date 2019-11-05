@@ -3,6 +3,49 @@
 *{ /* universal styles */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html,body {
+    background-color: #27393d;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95em;
+    line-height: 1.5em;
 }
 
+::selection {
+    color: #000; 
+    background: #ff0;
+}
+
+h2, p {
+    padding:0.5em;
+}
+
+p {
+    font-size:1.2em; 
+}
+
+section {
+    width:100%;
+    overflow:auto;
+    padding: 2.5%;
+}
+
+
+
+div.wrapper {
+    max-width:80%;
+    background-color: aliceblue;
+    margin:0 auto; /* TopBottom RightLeft */
+    overflow:auto; /* to remind the parent element, in this case the div.wapper, to see any floated child elements */
+    margin-top: 2%;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+    
